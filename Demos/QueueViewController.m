@@ -26,8 +26,7 @@
 
 @interface QueueViewController ()
 {
-//    NSArray *imgurls;
-    
+    NSArray *imgurls;
     NSOperationQueue *OperationQueue;
 }
 @end
@@ -37,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    imgurls = @[@"http://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg", @"http://adriatic-lines.com/wp-content/uploads/2015/04/canal-of-Venice.jpg", @"http://algoos.com/wp-content/uploads/2015/08/ireland-02.jpg", @"http://bdo.se/wp-content/uploads/2014/01/Stockholm1.jpg"];
+    imgurls = @[@"http://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg", @"http://adriatic-lines.com/wp-content/uploads/2015/04/canal-of-Venice.jpg", @"http://algoos.com/wp-content/uploads/2015/08/ireland-02.jpg", @"http://bdo.se/wp-content/uploads/2014/01/Stockholm1.jpg"];
     
     OperationQueue = [[NSOperationQueue alloc] init];
     // Do any additional setup after loading the view, typically from a nib.
@@ -59,31 +58,31 @@
     dispatch_queue_t Queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
     dispatch_async(Queue, ^{
-//        UIImage *Img1 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:0]];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            _imgVw1.image = Img1;
-//        });
+        UIImage *Img1 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:0]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _imgVw1.image = Img1;
+        });
      });
     
     dispatch_async(Queue, ^{
-//        UIImage *Img2 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:1]];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            _imgVw2.image = Img2;
-//        });
+        UIImage *Img2 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:1]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _imgVw2.image = Img2;
+        });
     });
     
     dispatch_async(Queue, ^{
-//        UIImage *Img3 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:2]];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            _imgVw3.image = Img3;
-//        });
+        UIImage *Img3 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:2]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _imgVw3.image = Img3;
+        });
     });
     
     dispatch_async(Queue, ^{
-//        UIImage *Img4 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:3]];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            _imgVw4.image = Img4;
-//        });
+        UIImage *Img4 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:3]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _imgVw4.image = Img4;
+        });
     });
 }
 
@@ -93,31 +92,31 @@
     dispatch_queue_t Queue = dispatch_queue_create("com.imageQueue", DISPATCH_QUEUE_SERIAL);
     
     dispatch_async(Queue, ^{
-//        UIImage *Img1 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:0]];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            _imgVw1.image = Img1;
-//        });
+        UIImage *Img1 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:0]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _imgVw1.image = Img1;
+        });
     });
     
     dispatch_async(Queue, ^{
-//        UIImage *Img2 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:1]];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            _imgVw2.image = Img2;
-//        });
+        UIImage *Img2 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:1]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _imgVw2.image = Img2;
+        });
     });
     
     dispatch_async(Queue, ^{
-//        UIImage *Img3 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:2]];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            _imgVw3.image = Img3;
-//        });
+        UIImage *Img3 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:2]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _imgVw3.image = Img3;
+        });
     });
     
     dispatch_async(Queue, ^{
-//        UIImage *Img4 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:3]];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            _imgVw4.image = Img4;
-//        });
+        UIImage *Img4 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:3]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _imgVw4.image = Img4;
+        });
     });
 }
 
@@ -132,24 +131,24 @@
     [self BtnRemoveAction:sender];
     
     [OperationQueue addOperationWithBlock:^{
-//        UIImage *Img1 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:0]];
-//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//            _imgVw1.image = Img1;
-//        }];
+        UIImage *Img1 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:0]];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            _imgVw1.image = Img1;
+        }];
     }];
     
     [OperationQueue addOperationWithBlock:^{
-//        UIImage *Img2 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:1]];
-//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//            _imgVw2.image = Img2;
-//        }];
+        UIImage *Img2 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:1]];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            _imgVw2.image = Img2;
+        }];
     }];
     
     NSBlockOperation *OperationBlock1 = [NSBlockOperation blockOperationWithBlock:^{
-//        UIImage *Img3 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:2]];
-//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//            _imgVw3.image = Img3;
-//        }];
+        UIImage *Img3 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:2]];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            _imgVw3.image = Img3;
+        }];
     }];
     
     
@@ -168,10 +167,10 @@
     }];
     
     NSBlockOperation *OperationBlock2 = [NSBlockOperation blockOperationWithBlock:^{
-//        UIImage *Img4 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:3]];
-//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//            _imgVw4.image = Img4;
-//        }];
+        UIImage *Img4 = [Downloader DownloadImageFromUrl:[imgurls objectAtIndex:3]];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            _imgVw4.image = Img4;
+        }];
     }];
     
     
