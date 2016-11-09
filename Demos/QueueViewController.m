@@ -28,6 +28,7 @@
 {
     NSArray *imgurls;
     NSOperationQueue *OperationQueue;
+    NSString *leaveError;
 }
 @end
 
