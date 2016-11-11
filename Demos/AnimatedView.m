@@ -51,6 +51,12 @@
     
 }
 
++(UIImage *)DownloadImageFromUrl : (NSString *)url
+{
+    UIImage *Img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+    return Img;
+}
+
 - (IBAction)BtnBack:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
