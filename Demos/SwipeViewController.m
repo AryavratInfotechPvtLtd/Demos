@@ -19,10 +19,6 @@
 @implementation SwipeViewController
 
 - (void)viewDidLoad {
-    
-    
-    
-    
     [super viewDidLoad];
     
     [self AddGesture];
