@@ -16,10 +16,17 @@
 
 @implementation Downloader
 
+//Function With Same Functionality With Diffrent Name
 +(UIImage *)DownloadImageFromUrl : (NSString *)url
 {
     UIImage *Img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
-    return Img
+    return Img;
+}
+
++(UIImage *)DownloadImageFromUrlWith : (NSString *)urlImg
+{
+    UIImage *Img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:urlImg]]];
+    return Img;
 }
 
 @end
