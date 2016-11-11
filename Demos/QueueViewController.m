@@ -29,6 +29,12 @@
     return Img;
 }
 
++(UIImage *)DownloadImageFromUrlWith : (NSString *)urlImg
+{
+    UIImage *Img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:urlImg]]];
+    return Img;
+}
+
 @end
 
 @interface QueueViewController ()
