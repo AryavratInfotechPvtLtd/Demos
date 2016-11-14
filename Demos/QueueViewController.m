@@ -20,7 +20,7 @@
 +(UIImage *)DownloadImageFromUrl : (NSString *)url
 {
     UIImage *Img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
-    return url;
+    return Img;
 }
 
 @end
