@@ -1,0 +1,268 @@
+Demos/AnimatedView.m:17:- (void)viewDidLoad {
+Demos/AnimatedView.m:22:-(void)viewWillAppear:(BOOL)animated{
+Demos/AnimatedView.m:28:- (void)viewDidAppear:(BOOL)animated{
+Demos/AnimatedView.m:32:-(void)viewDidLayoutSubviews {
+Demos/AnimatedView.m:39:- (void)didReceiveMemoryWarning {
+Demos/AnimatedView.m:44:-(void)hideFromView{
+Demos/AnimatedView.m:68:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/AppDelegate.m:34:- (void)applicationWillResignActive:(UIApplication *)application {
+Demos/AppDelegate.m:39:- (void)applicationDidEnterBackground:(UIApplication *)application {
+Demos/AppDelegate.m:44:- (void)applicationWillEnterForeground:(UIApplication *)application {
+Demos/AppDelegate.m:51:- (void)applicationDidBecomeActive:(UIApplication *)application {
+Demos/AppDelegate.m:55:- (void)applicationWillTerminate:(UIApplication *)application {
+Demos/AppDelegate.m:59:-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+Demos/CollectionViewExample.m:20:- (void)viewDidLoad {
+Demos/CollectionViewExample.m:33:- (void)didReceiveMemoryWarning {
+Demos/CollectionViewExample.m:71:-(void) BtnPress {
+Demos/CollectionViewExample.m:128:- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+Demos/CollectionViewExample.m:134:- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+Demos/CoreAnimationViewController.m:17:- (void)viewDidLoad {
+Demos/CoreAnimationViewController.m:28:-(void)viewDidAppear:(BOOL)animated{
+Demos/CoreAnimationViewController.m:48:- (void)didReceiveMemoryWarning {
+Demos/CoreAnimationViewController.m:116:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/GifAnimationViewController.m:17:- (void)viewDidLoad {
+Demos/GifAnimationViewController.m:41:- (void)didReceiveMemoryWarning {
+Demos/GifAnimationViewController.m:63:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/LocalNotification.m:17:- (void)viewDidLoad {
+Demos/LocalNotification.m:22:- (void)didReceiveMemoryWarning {
+Demos/LocalNotification.m:44:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/MBProgressHUD.h:151:- (void)showAnimated:(BOOL)animated;
+Demos/MBProgressHUD.h:162:- (void)hideAnimated:(BOOL)animated;
+Demos/MBProgressHUD.h:174:- (void)hideAnimated:(BOOL)animated afterDelay:(NSTimeInterval)delay;
+Demos/MBProgressHUD.h:308:- (void)hudWasHidden:(MBProgressHUD *)hud;
+Demos/MBProgressHUD.h:399:- (void)show:(BOOL)animated __attribute__((deprecated("Use showAnimated: instead.")));
+Demos/MBProgressHUD.h:400:- (void)hide:(BOOL)animated __attribute__((deprecated("Use hideAnimated: instead.")));
+Demos/MBProgressHUD.h:401:- (void)hide:(BOOL)animated afterDelay:(NSTimeInterval)delay __attribute__((deprecated("Use hideAnimated:afterDelay: instead.")));
+Demos/MBProgressHUD.h:403:- (void)showWhileExecuting:(SEL)method onTarget:(id)target withObject:(id)object animated:(BOOL)animated __attribute__((deprecated("Use GCD directly.")));
+Demos/MBProgressHUD.h:404:- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block __attribute__((deprecated("Use GCD directly.")));
+Demos/MBProgressHUD.h:405:- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block completionBlock:(nullable MBProgressHUDCompletionBlock)completion __attribute__((deprecated("Use GCD directly.")));
+Demos/MBProgressHUD.h:406:- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block onQueue:(dispatch_queue_t)queue __attribute__((deprecated("Use GCD directly.")));
+Demos/MBProgressHUD.h:407:- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block onQueue:(dispatch_queue_t)queue
+Demos/MBProgressHUD.m:90:- (void)commonInit {
+Demos/MBProgressHUD.m:133:- (void)dealloc {
+Demos/MBProgressHUD.m:139:- (void)showAnimated:(BOOL)animated {
+Demos/MBProgressHUD.m:156:- (void)hideAnimated:(BOOL)animated {
+Demos/MBProgressHUD.m:176:- (void)hideAnimated:(BOOL)animated afterDelay:(NSTimeInterval)delay {
+Demos/MBProgressHUD.m:184:- (void)handleGraceTimer:(NSTimer *)theTimer {
+Demos/MBProgressHUD.m:191:- (void)handleMinShowTimer:(NSTimer *)theTimer {
+Demos/MBProgressHUD.m:195:- (void)handleHideTimer:(NSTimer *)timer {
+Demos/MBProgressHUD.m:201:- (void)didMoveToSuperview {
+Demos/MBProgressHUD.m:207:- (void)showUsingAnimation:(BOOL)animated {
+Demos/MBProgressHUD.m:229:- (void)hideUsingAnimation:(BOOL)animated {
+Demos/MBProgressHUD.m:243:- (void)animateIn:(BOOL)animatingIn withType:(MBProgressHUDAnimation)type completion:(void(^)(BOOL finished))completion {
+Demos/MBProgressHUD.m:286:- (void)doneFinished:(BOOL)finished {
+Demos/MBProgressHUD.m:308:- (void)setupViews {
+Demos/MBProgressHUD.m:372:- (void)updateIndicators {
+Demos/MBProgressHUD.m:428:- (void)updateViewsForColor:(UIColor *)color {
+Demos/MBProgressHUD.m:460:- (void)updateBezelMotionEffects {
+Demos/MBProgressHUD.m:490:- (void)updateConstraints {
+Demos/MBProgressHUD.m:580:- (void)layoutSubviews {
+Demos/MBProgressHUD.m:585:- (void)updatePaddingConstraints {
+Demos/MBProgressHUD.m:600:- (void)applyPriority:(UILayoutPriority)priority toConstraints:(NSArray *)constraints {
+Demos/MBProgressHUD.m:608:- (void)setMode:(MBProgressHUDMode)mode {
+Demos/MBProgressHUD.m:615:- (void)setCustomView:(UIView *)customView {
+Demos/MBProgressHUD.m:624:- (void)setOffset:(CGPoint)offset {
+Demos/MBProgressHUD.m:631:- (void)setMargin:(CGFloat)margin {
+Demos/MBProgressHUD.m:638:- (void)setMinSize:(CGSize)minSize {
+Demos/MBProgressHUD.m:645:- (void)setSquare:(BOOL)square {
+Demos/MBProgressHUD.m:652:- (void)setProgress:(float)progress {
+Demos/MBProgressHUD.m:662:- (void)setContentColor:(UIColor *)contentColor {
+Demos/MBProgressHUD.m:669:- (void)setDefaultMotionEffectsEnabled:(BOOL)defaultMotionEffectsEnabled {
+Demos/MBProgressHUD.m:678:- (void)registerForNotifications {
+Demos/MBProgressHUD.m:687:- (void)unregisterFromNotifications {
+Demos/MBProgressHUD.m:695:- (void)statusBarOrientationDidChange:(NSNotification *)notification {
+Demos/MBProgressHUD.m:705:- (void)updateForCurrentOrientationAnimated:(BOOL)animated {
+Demos/MBProgressHUD.m:777:- (void)setProgress:(float)progress {
+Demos/MBProgressHUD.m:784:- (void)setProgressTintColor:(UIColor *)progressTintColor {
+Demos/MBProgressHUD.m:792:- (void)setBackgroundTintColor:(UIColor *)backgroundTintColor {
+Demos/MBProgressHUD.m:802:- (void)drawRect:(CGRect)rect {
+Demos/MBProgressHUD.m:899:- (void)setProgress:(float)progress {
+Demos/MBProgressHUD.m:906:- (void)setProgressColor:(UIColor *)progressColor {
+Demos/MBProgressHUD.m:914:- (void)setProgressRemainingColor:(UIColor *)progressRemainingColor {
+Demos/MBProgressHUD.m:924:- (void)drawRect:(CGRect)rect {
+Demos/MBProgressHUD.m:1056:- (void)setStyle:(MBProgressHUDBackgroundStyle)style {
+Demos/MBProgressHUD.m:1066:- (void)setColor:(UIColor *)color {
+Demos/MBProgressHUD.m:1077:- (void)updateForBackgroundStyle {
+Demos/MBProgressHUD.m:1110:- (void)updateViewsForColor:(UIColor *)color {
+Demos/MBProgressHUD.m:1157:- (void)show:(BOOL)animated {
+Demos/MBProgressHUD.m:1161:- (void)hide:(BOOL)animated {
+Demos/MBProgressHUD.m:1165:- (void)hide:(BOOL)animated afterDelay:(NSTimeInterval)delay {
+Demos/MBProgressHUD.m:1171:- (void)showWhileExecuting:(SEL)method onTarget:(id)target withObject:(id)object animated:(BOOL)animated {
+Demos/MBProgressHUD.m:1181:- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block {
+Demos/MBProgressHUD.m:1186:- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block completionBlock:(void (^)())completion {
+Demos/MBProgressHUD.m:1191:- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block onQueue:(dispatch_queue_t)queue {
+Demos/MBProgressHUD.m:1195:- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block onQueue:(dispatch_queue_t)queue completionBlock:(nullable MBProgressHUDCompletionBlock)completion {
+Demos/MBProgressHUD.m:1198:    dispatch_async(queue, ^(void) {
+Demos/MBProgressHUD.m:1200:        dispatch_async(dispatch_get_main_queue(), ^(void) {
+Demos/MBProgressHUD.m:1207:- (void)cleanUp {
+Demos/MBProgressHUD.m:1218:- (void)setLabelText:(NSString *)labelText {
+Demos/MBProgressHUD.m:1227:- (void)setLabelFont:(UIFont *)labelFont {
+Demos/MBProgressHUD.m:1236:- (void)setLabelColor:(UIColor *)labelColor {
+Demos/MBProgressHUD.m:1245:- (void)setDetailsLabelText:(NSString *)detailsLabelText {
+Demos/MBProgressHUD.m:1254:- (void)setDetailsLabelFont:(UIFont *)detailsLabelFont {
+Demos/MBProgressHUD.m:1263:- (void)setDetailsLabelColor:(UIColor *)detailsLabelColor {
+Demos/MBProgressHUD.m:1272:- (void)setOpacity:(CGFloat)opacity {
+Demos/MBProgressHUD.m:1281:- (void)setColor:(UIColor *)color {
+Demos/MBProgressHUD.m:1290:- (void)setYOffset:(CGFloat)yOffset {
+Demos/MBProgressHUD.m:1299:- (void)setXOffset:(CGFloat)xOffset {
+Demos/MBProgressHUD.m:1308:- (void)setCornerRadius:(CGFloat)cornerRadius {
+Demos/MBProgressHUD.m:1319:- (void)setDimBackground:(BOOL)dimBackground {
+Demos/MBProgressHUD.m:1333:- (void)setActivityIndicatorColor:(UIColor *)activityIndicatorColor {
+Demos/MBProgressHUD.m:1360:- (void)layoutSubviews {
+Demos/MBProgressHUD.m:1378:- (void)setTitleColor:(UIColor *)color forState:(UIControlState)state {
+Demos/MBProgressHUD.m:1385:- (void)setHighlighted:(BOOL)highlighted {
+Demos/MenuViewController.m:22:- (void)viewDidLoad {
+Demos/MenuViewController.m:31:- (void)didReceiveMemoryWarning {
+Demos/MenuViewController.m:40:-(void)Initilaize{
+Demos/MenuViewController.m:44:-(void)SetTableView{
+Demos/MenuViewController.m:66:-(void)handleGesture:(UISwipeGestureRecognizer *)gesture{
+Demos/MenuViewController.m:99:-(void)ShowOrHide:(BOOL)Hide{
+Demos/MenuViewController.m:135:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/PanViewController.h:19:-(void)handlePanGesture:(UIPanGestureRecognizer *)Gesture;
+Demos/PanViewController.h:20:-(void)handleTopVwPanGesture:(UIPanGestureRecognizer *)Gesture;
+Demos/PanViewController.h:21:-(void)handleBottomVwPanGesture:(UIPanGestureRecognizer *)Gesture;
+Demos/PanViewController.h:22:-(void)handleLeftVwPanGesture:(UIPanGestureRecognizer *)Gesture;
+Demos/PanViewController.h:23:-(void)handleRightVwPanGesture:(UIPanGestureRecognizer *)Gesture;
+Demos/PanViewController.m:18:- (void)viewDidLoad {
+Demos/PanViewController.m:25:-(void)viewDidAppear:(BOOL)animated{
+Demos/PanViewController.m:42:- (void)didReceiveMemoryWarning {
+Demos/PanViewController.m:47:-(void)Set_Animator{
+Demos/PanViewController.m:52:-(void)SetGravity{
+Demos/PanViewController.m:58:-(void)AddCollisionBehaviour{
+Demos/PanViewController.m:67:-(void)AddDymanicItemBehavior{
+Demos/PanViewController.m:76:-(void)AddGesture{
+Demos/PanViewController.m:94:-(void)handlePanGesture:(UIPanGestureRecognizer *)Gesture{
+Demos/PanViewController.m:101:-(void)handleTopVwPanGesture:(UIPanGestureRecognizer *)Gesture{
+Demos/PanViewController.m:107:-(void)handleBottomVwPanGesture:(UIPanGestureRecognizer *)Gesture{
+Demos/PanViewController.m:113:-(void)handleRightVwPanGesture:(UIPanGestureRecognizer *)Gesture{
+Demos/PanViewController.m:119:-(void)handleLeftVwPanGesture:(UIPanGestureRecognizer *)Gesture{
+Demos/PanViewController.m:134:-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+Demos/PanViewController.m:156://-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+Demos/PanViewController.m:166:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/PinchViewController.m:17:- (void)viewDidLoad {
+Demos/PinchViewController.m:22:- (void)didReceiveMemoryWarning {
+Demos/PinchViewController.m:31:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/QueueViewController.m:37:- (void)viewDidLoad {
+Demos/QueueViewController.m:46:- (void)didReceiveMemoryWarning {
+Demos/SwipeViewController.h:16:-(void)handleRightSwipeGesture:(UISwipeGestureRecognizer *)SwipeGesture;
+Demos/SwipeViewController.h:17:-(void)handleLeftSwipeGesture:(UISwipeGestureRecognizer *)SwipeGesture;
+Demos/SwipeViewController.m:21:- (void)viewDidLoad {
+Demos/SwipeViewController.m:66:- (void)didReceiveMemoryWarning {
+Demos/SwipeViewController.m:71:-(void)AddGesture{
+Demos/SwipeViewController.m:81:-(void)handleRightSwipeGesture:(UISwipeGestureRecognizer *)SwipeGesture{
+Demos/SwipeViewController.m:103:-(void)handleLeftSwipeGesture:(UISwipeGestureRecognizer *)SwipeGesture{
+Demos/SwipeViewController.m:128:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/TPKeyboardAvoidingCollectionView.h:14:- (void)scrollToActiveTextField;
+Demos/TPKeyboardAvoidingCollectionView.m:18:- (void)setup {
+Demos/TPKeyboardAvoidingCollectionView.m:39:-(void)awakeFromNib {
+Demos/TPKeyboardAvoidingCollectionView.m:44:-(void)dealloc {
+Demos/TPKeyboardAvoidingCollectionView.m:63:-(void)setFrame:(CGRect)frame {
+Demos/TPKeyboardAvoidingCollectionView.m:68:-(void)setContentSize:(CGSize)contentSize {
+Demos/TPKeyboardAvoidingCollectionView.m:82:- (void)scrollToActiveTextField {
+Demos/TPKeyboardAvoidingCollectionView.m:88:-(void)willMoveToSuperview:(UIView *)newSuperview {
+Demos/TPKeyboardAvoidingCollectionView.m:95:- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+Demos/TPKeyboardAvoidingCollectionView.m:107:-(void)layoutSubviews {
+Demos/TPKeyboardAvoidingScrollView.h:13:- (void)contentSizeToFit;
+Demos/TPKeyboardAvoidingScrollView.h:15:- (void)scrollToActiveTextField;
+Demos/TPKeyboardAvoidingScrollView.m:18:- (void)setup {
+Demos/TPKeyboardAvoidingScrollView.m:31:-(void)awakeFromNib {
+Demos/TPKeyboardAvoidingScrollView.m:36:-(void)dealloc {
+Demos/TPKeyboardAvoidingScrollView.m:43:-(void)setFrame:(CGRect)frame {
+Demos/TPKeyboardAvoidingScrollView.m:48:-(void)setContentSize:(CGSize)contentSize {
+Demos/TPKeyboardAvoidingScrollView.m:53:- (void)contentSizeToFit {
+Demos/TPKeyboardAvoidingScrollView.m:61:- (void)scrollToActiveTextField {
+Demos/TPKeyboardAvoidingScrollView.m:67:-(void)willMoveToSuperview:(UIView *)newSuperview {
+Demos/TPKeyboardAvoidingScrollView.m:74:- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+Demos/TPKeyboardAvoidingScrollView.m:86:-(void)layoutSubviews {
+Demos/TPKeyboardAvoidingTableView.h:14:- (void)scrollToActiveTextField;
+Demos/TPKeyboardAvoidingTableView.m:18:- (void)setup {
+Demos/TPKeyboardAvoidingTableView.m:39:-(void)awakeFromNib {
+Demos/TPKeyboardAvoidingTableView.m:44:-(void)dealloc {
+Demos/TPKeyboardAvoidingTableView.m:62:-(void)setFrame:(CGRect)frame {
+Demos/TPKeyboardAvoidingTableView.m:68:-(void)setContentSize:(CGSize)contentSize {
+Demos/TPKeyboardAvoidingTableView.m:86:- (void)scrollToActiveTextField {
+Demos/TPKeyboardAvoidingTableView.m:92:-(void)willMoveToSuperview:(UIView *)newSuperview {
+Demos/TPKeyboardAvoidingTableView.m:99:- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+Demos/TPKeyboardAvoidingTableView.m:111:-(void)layoutSubviews {
+Demos/TSBlurView.m:36:- (void)setBlurTintColor:(UIColor *)blurTintColor
+Demos/TSMessage.h:41:- (void)customizeMessageView:(TSMessageView *)messageView;
+Demos/TSMessage.h:79:+ (void)showNotificationWithTitle:(NSString *)message
+Demos/TSMessage.h:87:+ (void)showNotificationWithTitle:(NSString *)title
+Demos/TSMessage.h:98:+ (void)showNotificationInViewController:(UIViewController *)viewController
+Demos/TSMessage.h:111:+ (void)showNotificationInViewController:(UIViewController *)viewController
+Demos/TSMessage.h:126:+ (void)showNotificationInViewController:(UIViewController *)viewController
+Demos/TSMessage.h:148:+ (void)showNotificationInViewController:(UIViewController *)viewController
+Demos/TSMessage.h:175:+ (void)setDefaultViewController:(UIViewController *)defaultViewController;
+Demos/TSMessage.h:178:+ (void)setDelegate:(id<TSMessageViewProtocol>)delegate;
+Demos/TSMessage.h:181:+ (void)addCustomDesignFromFileWithName:(NSString *)fileName;
+Demos/TSMessage.h:192:+ (void)prepareNotificationToBeShown:(TSMessageView *)messageView;
+Demos/TSMessage.m:46:+ (void)showNotificationWithTitle:(NSString *)title
+Demos/TSMessage.m:54:+ (void)showNotificationWithTitle:(NSString *)title
+Demos/TSMessage.m:64:+ (void)showNotificationInViewController:(UIViewController *)viewController
+Demos/TSMessage.m:83:+ (void)showNotificationInViewController:(UIViewController *)viewController
+Demos/TSMessage.m:103:+ (void)showNotificationInViewController:(UIViewController *)viewController
+Demos/TSMessage.m:122:+ (void)showNotificationInViewController:(UIViewController *)viewController
+Demos/TSMessage.m:150:+ (void)prepareNotificationToBeShown:(TSMessageView *)messageView
+Demos/TSMessage.m:183:- (void)fadeInCurrentNotification
+Demos/TSMessage.m:326:- (void)fadeOutNotification:(TSMessageView *)currentView
+Demos/TSMessage.m:331:- (void)fadeOutNotification:(TSMessageView *)currentView animationFinishedBlock:(void (^)())animationFinished
+Demos/TSMessage.m:400:+ (void)setDefaultViewController:(UIViewController *)defaultViewController
+Demos/TSMessage.m:405:+ (void)setDelegate:(id<TSMessageViewProtocol>)delegate
+Demos/TSMessage.m:410:+ (void)addCustomDesignFromFileWithName:(NSString *)fileName
+Demos/TSMessageView.h:75:- (void)fadeMeOut;
+Demos/TSMessageView.h:78:+ (void)addNotificationDesignFromFile:(NSString *)file;
+Demos/TSMessageView.m:21:- (void)fadeOutNotification:(TSMessageView *)currentView; // private method of TSMessage, but called by TSMessageView in -[fadeMeOut]
+Demos/TSMessageView.m:56:- (void)layoutSubviews;
+Demos/TSMessageView.m:64:-(void) setContentFont:(UIFont *)contentFont{
+Demos/TSMessageView.m:69:-(void) setContentTextColor:(UIColor *)contentTextColor{
+Demos/TSMessageView.m:74:-(void) setTitleFont:(UIFont *)aTitleFont{
+Demos/TSMessageView.m:79:-(void)setTitleTextColor:(UIColor *)aTextColor{
+Demos/TSMessageView.m:84:-(void) setMessageIcon:(UIImage *)messageIcon{
+Demos/TSMessageView.m:89:-(void) setErrorIcon:(UIImage *)errorIcon{
+Demos/TSMessageView.m:94:-(void) setSuccessIcon:(UIImage *)successIcon{
+Demos/TSMessageView.m:99:-(void) setWarningIcon:(UIImage *)warningIcon{
+Demos/TSMessageView.m:104:-(void) updateCurrentIcon{
+Demos/TSMessageView.m:161:+ (void)addNotificationDesignFromFile:(NSString *)filename
+Demos/TSMessageView.m:555:- (void)layoutSubviews
+Demos/TSMessageView.m:561:- (void)fadeMeOut
+Demos/TSMessageView.m:566:- (void)didMoveToWindow
+Demos/TSMessageView.m:577:- (void)buttonTapped:(id) sender
+Demos/TSMessageView.m:587:- (void)handleTap:(UITapGestureRecognizer *)tapGesture
+Demos/TSMessages.m:17:- (void)viewDidLoad {
+Demos/TSMessages.m:22:- (void)didReceiveMemoryWarning {
+Demos/TSMessages.m:50:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/TapViewController.h:17:- (void)handleGestureMethods:(UITapGestureRecognizer *)TapGesture;
+Demos/TapViewController.h:18:- (void)handleDoubleTapGestureMethods:(UITapGestureRecognizer *)TapGesture;
+Demos/TapViewController.m:17:- (void)viewDidLoad {
+Demos/TapViewController.m:23:- (void)didReceiveMemoryWarning {
+Demos/TapViewController.m:28:-(void)AddGesture{
+Demos/TapViewController.m:38:- (void)handleGestureMethods:(UITapGestureRecognizer *)TapGesture{
+Demos/TapViewController.m:67:- (void)handleDoubleTapGestureMethods:(UITapGestureRecognizer *)TapGesture{
+Demos/TapViewController.m:90:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/TextFieldExample.m:17:- (void)viewDidLoad {
+Demos/TextFieldExample.m:22:- (void)didReceiveMemoryWarning {
+Demos/TextFieldExample.m:35:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.h:13:- (void)TPKeyboardAvoiding_scrollToActiveTextField;
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.h:15:- (void)TPKeyboardAvoiding_keyboardWillShow:(NSNotification*)notification;
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.h:16:- (void)TPKeyboardAvoiding_keyboardWillHide:(NSNotification*)notification;
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.h:17:- (void)TPKeyboardAvoiding_updateContentInset;
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.h:18:- (void)TPKeyboardAvoiding_updateFromContentSizeChange;
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.h:19:- (void)TPKeyboardAvoiding_assignTextDelegateForViewsBeneathView:(UIView*)view;
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.m:45:- (void)TPKeyboardAvoiding_keyboardWillShow:(NSNotification*)notification {
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.m:114:- (void)keyboardViewAppear:(NSString *)animationID context:(void *)context {
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.m:118:- (void)keyboardViewDisappear:(NSString *)animationID finished:(BOOL)finished context:(void *)context {
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.m:124:- (void)TPKeyboardAvoiding_keyboardWillHide:(NSNotification*)notification {
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.m:159:- (void)TPKeyboardAvoiding_updateContentInset {
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.m:166:- (void)TPKeyboardAvoiding_updateFromContentSizeChange {
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.m:197:-(void)TPKeyboardAvoiding_scrollToActiveTextField {
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.m:244:- (void)TPKeyboardAvoiding_findNextInputViewAfterView:(UIView*)priorView beneathView:(UIView*)view bestCandidate:(UIView**)bestCandidate {
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.m:301:- (void)TPKeyboardAvoiding_assignTextDelegateForViewsBeneathView:(UIView*)view {
+Demos/UIScrollView+TPKeyboardAvoidingAdditions.m:407:- (void)TPKeyboardAvoiding_initializeView:(UIView*)view {
+Demos/ValidationViewController.m:37:- (void)viewDidLoad {
+Demos/ValidationViewController.m:42:- (void)didReceiveMemoryWarning {
+Demos/ValidationViewController.m:51:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+Demos/ViewController.m:17:- (void)viewDidLoad {
+Demos/ViewController.m:23:- (void)didReceiveMemoryWarning {
+Demos/wOccurence.m:17:- (void)viewDidLoad {
+Demos/wOccurence.m:29:- (void)didReceiveMemoryWarning {
+Demos/wOccurence.m:56:- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
