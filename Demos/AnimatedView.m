@@ -43,11 +43,11 @@
 
 -(void)hideFromView{
     
-//    [UIView animateWithDuration:0.0 animations:^{
-//        
-//        [_txtUser setFrame:CGRectMake(-self.view.frame.size.width, _txtUser.frame.origin.y, _txtUser.frame.size.width, _txtUser.frame.size.height)];
-//        [_txtUser layoutIfNeeded];
-//    }];
+    [UIView animateWithDuration:0.0 animations:^{
+        
+        [_txtUser setFrame:CGRectMake(-self.view.frame.size.width, _txtUser.frame.origin.y, _txtUser.frame.size.width, _txtUser.frame.size.height)];
+        [_txtUser layoutIfNeeded];
+    }];
     
 }
 
