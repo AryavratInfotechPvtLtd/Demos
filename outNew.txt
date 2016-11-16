@@ -1,0 +1,24 @@
+diff --git a/Demos.xcodeproj/project.xcworkspace/xcuserdata/user.xcuserdatad/UserInterfaceState.xcuserstate b/Demos.xcodeproj/project.xcworkspace/xcuserdata/user.xcuserdatad/UserInterfaceState.xcuserstate
+index 4f71efb..4b56a66 100644
+Binary files a/Demos.xcodeproj/project.xcworkspace/xcuserdata/user.xcuserdatad/UserInterfaceState.xcuserstate and b/Demos.xcodeproj/project.xcworkspace/xcuserdata/user.xcuserdatad/UserInterfaceState.xcuserstate differ
+diff --git a/Demos/AnimatedView.m b/Demos/AnimatedView.m
+index eae4c27..313a229 100644
+--- a/Demos/AnimatedView.m
++++ b/Demos/AnimatedView.m
+@@ -43,11 +43,11 @@ - (void)didReceiveMemoryWarning {
+ 
+ -(void)hideFromView{
+     
+-    [UIView animateWithDuration:0.0 animations:^{
+-        
+-        [_txtUser setFrame:CGRectMake(-self.view.frame.size.width, _txtUser.frame.origin.y, _txtUser.frame.size.width, _txtUser.frame.size.height)];
+-        [_txtUser layoutIfNeeded];
+-    }];
++//    [UIView animateWithDuration:0.0 animations:^{
++//        
++//        [_txtUser setFrame:CGRectMake(-self.view.frame.size.width, _txtUser.frame.origin.y, _txtUser.frame.size.width, _txtUser.frame.size.height)];
++//        [_txtUser layoutIfNeeded];
++//    }];
+     
+ }
+ 

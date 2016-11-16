@@ -31,8 +31,8 @@
 
 -(void)viewDidLayoutSubviews {
 
-//        [super viewDidLayoutSubviews];
-//        [_VwLog setCenter:CGPointMake(-_VwLog.frame.size.width, _VwLog.center.y)];
+        [super viewDidLayoutSubviews];
+        [_VwLog setCenter:CGPointMake(-_VwLog.frame.size.width, _VwLog.center.y)];
 
 }
 
