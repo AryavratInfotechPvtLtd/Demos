@@ -54,7 +54,7 @@
 +(UIImage *)DownloadImageFromUrl : (NSString *)url
 {
     UIImage *Img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
-    return Imgurl;
+    return url;
 }
 
 - (IBAction)BtnBack:(id)sender {
