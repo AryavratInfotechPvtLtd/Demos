@@ -398,10 +398,10 @@
             </objects>
             <point key="canvasLocation" x="482" y="128"/>
         </scene>
-        <!--Swipe-->
+        <!--SwipeViewController"ROht Parihar"-->
         <scene sceneID="byV-3n-OOJ">
             <objects>
-                <viewController id="3wv-Ua-bId" customClass="SwipeViewController" sceneMemberID="viewController">
+                <viewController title="SwipeViewController&quot;ROht Parihar&quot;" id="3wv-Ua-bId" customClass="SwipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tHV-UH-kiZ"/>
                         <viewControllerLayoutGuide type="bottom" id="yxk-g6-TOS"/>
@@ -466,10 +466,10 @@
                                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="qhW-Uk-9nB">
-                                                <rect key="frame" x="0.0" y="28" width="0.0" height="44"/>
+                                                <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qhW-Uk-9nB" id="b5n-po-HlR">
-                                                    <frame key="frameInset" width="320" height="44"/>
+                                                    <frame key="frameInset" width="1000" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HA-TN-dbb">
@@ -1194,11 +1194,11 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header_Cell" id="CtE-qx-SyV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Footer_Cell" id="rNp-sf-rTJ">
-                                    <rect key="frame" x="0.0" y="230" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="230" width="1000" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                             </collectionView>
