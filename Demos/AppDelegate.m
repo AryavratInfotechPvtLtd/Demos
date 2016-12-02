@@ -1,11 +1,3 @@
-//
-//  AppDelegate.m
-//  Demos
-//
-//  Created by Rohit Parihar on 12/08/16.
-//  Copyright © 2016 Aryavrat. All rights reserved.
-//
-
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
