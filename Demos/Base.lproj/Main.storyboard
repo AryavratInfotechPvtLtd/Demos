@@ -263,10 +263,10 @@
             </objects>
             <point key="canvasLocation" x="-1676" y="370"/>
         </scene>
-        <!--Pan-->
+        <!--PanViewController-->
         <scene sceneID="ptm-mo-QDK">
             <objects>
-                <viewController id="jGk-Lk-unN" customClass="PanViewController" sceneMemberID="viewController">
+                <viewController title="PanViewController" id="jGk-Lk-unN" customClass="PanViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c2a-l6-Lht"/>
                         <viewControllerLayoutGuide type="bottom" id="PR0-Xj-lyb"/>
@@ -361,10 +361,10 @@
             </objects>
             <point key="canvasLocation" x="1487" y="128"/>
         </scene>
-        <!--Tap-->
+        <!--TapViewContoller-->
         <scene sceneID="Q67-Wh-m8M">
             <objects>
-                <viewController id="RW0-q5-vN5" customClass="TapViewController" sceneMemberID="viewController">
+                <viewController title="TapViewContoller" id="RW0-q5-vN5" customClass="TapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I74-ZR-teT"/>
                         <viewControllerLayoutGuide type="bottom" id="d8J-Us-MQy"/>
@@ -398,10 +398,10 @@
             </objects>
             <point key="canvasLocation" x="482" y="128"/>
         </scene>
-        <!--SwipeViewController"ROht Parihar"-->
+        <!--SwipeViewController-->
         <scene sceneID="byV-3n-OOJ">
             <objects>
-                <viewController title="SwipeViewController&quot;ROht Parihar&quot;" id="3wv-Ua-bId" customClass="SwipeViewController" sceneMemberID="viewController">
+                <viewController title="SwipeViewController" id="3wv-Ua-bId" customClass="SwipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tHV-UH-kiZ"/>
                         <viewControllerLayoutGuide type="bottom" id="yxk-g6-TOS"/>
@@ -439,10 +439,10 @@
             </objects>
             <point key="canvasLocation" x="2454" y="128"/>
         </scene>
-        <!--Menu-->
+        <!--MenuViewController-->
         <scene sceneID="Ixr-0c-Odm">
             <objects>
-                <viewController id="vy1-Nt-Zcm" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController title="MenuViewController" id="vy1-Nt-Zcm" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sb8-XH-wRm"/>
                         <viewControllerLayoutGuide type="bottom" id="lux-j0-7Hd"/>
@@ -515,10 +515,10 @@
             </objects>
             <point key="canvasLocation" x="3225.5999999999999" y="126.83658170914543"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--TabbarViewCOntroller-->
         <scene sceneID="kS4-jY-qmL">
             <objects>
-                <tabBarController id="QVQ-vM-esl" sceneMemberID="viewController">
+                <tabBarController title="TabbarViewCOntroller" id="QVQ-vM-esl" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="500"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="KVb-r3-882">
@@ -537,10 +537,10 @@
             </objects>
             <point key="canvasLocation" x="-668" y="128"/>
         </scene>
-        <!--Queues-->
+        <!--QueuesViewController-->
         <scene sceneID="y3g-PX-4IN">
             <objects>
-                <viewController title="Queues" id="4WY-8x-oDf" customClass="QueueViewController" sceneMemberID="viewController">
+                <viewController title="QueuesViewController" id="4WY-8x-oDf" customClass="QueueViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mHE-6q-Ntl"/>
                         <viewControllerLayoutGuide type="bottom" id="mi3-gT-hd6"/>
@@ -684,10 +684,10 @@
             </objects>
             <point key="canvasLocation" x="-669" y="-645"/>
         </scene>
-        <!--Occurence-->
+        <!--OccurenceViewController-->
         <scene sceneID="hRK-J4-G86">
             <objects>
-                <viewController id="GZa-RN-1L9" customClass="wOccurence" sceneMemberID="viewController">
+                <viewController title="OccurenceViewController" id="GZa-RN-1L9" customClass="wOccurence" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E4r-YN-4H1"/>
                         <viewControllerLayoutGuide type="bottom" id="txD-k3-mUf"/>
@@ -742,10 +742,10 @@
             </objects>
             <point key="canvasLocation" x="1487" y="-645"/>
         </scene>
-        <!--Core Animation View Controller-->
+        <!--CoreAnimationViewController-->
         <scene sceneID="4MB-PQ-bko">
             <objects>
-                <viewController id="fmX-82-BhV" customClass="CoreAnimationViewController" sceneMemberID="viewController">
+                <viewController title="CoreAnimationViewController" id="fmX-82-BhV" customClass="CoreAnimationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SMX-4x-i7G"/>
                         <viewControllerLayoutGuide type="bottom" id="YBt-H5-Wab"/>
@@ -843,10 +843,10 @@
             </objects>
             <point key="canvasLocation" x="-1508" y="1063"/>
         </scene>
-        <!--Local Notifications-->
+        <!--LocalNotificationsViewController-->
         <scene sceneID="laO-8A-xRO">
             <objects>
-                <viewController title="Local Notifications" id="0fL-Ja-3Wx" customClass="LocalNotification" sceneMemberID="viewController">
+                <viewController title="LocalNotificationsViewController" id="0fL-Ja-3Wx" customClass="LocalNotification" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J1c-Mr-uOn"/>
                         <viewControllerLayoutGuide type="bottom" id="1Lb-RN-wsU"/>
@@ -885,10 +885,10 @@
             </objects>
             <point key="canvasLocation" x="-669" y="906"/>
         </scene>
-        <!--Text-->
+        <!--TextViewController-->
         <scene sceneID="t03-Ut-cFD">
             <objects>
-                <viewController title="Text" id="zZK-Z7-HCg" customClass="TextFieldExample" sceneMemberID="viewController">
+                <viewController title="TextViewController" id="zZK-Z7-HCg" customClass="TextFieldExample" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hdd-56-nNO"/>
                         <viewControllerLayoutGuide type="bottom" id="aok-uB-1OV"/>
@@ -946,10 +946,10 @@
             </objects>
             <point key="canvasLocation" x="482" y="905"/>
         </scene>
-        <!--TSMessages-->
+        <!--TSMessagesViewController-->
         <scene sceneID="IYV-Vg-TzR">
             <objects>
-                <viewController title="TSMessages" id="hOy-4L-MPM" customClass="TSMessages" sceneMemberID="viewController">
+                <viewController title="TSMessagesViewController" id="hOy-4L-MPM" customClass="TSMessages" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wde-wG-Bq3"/>
                         <viewControllerLayoutGuide type="bottom" id="z5N-sw-Noc"/>
@@ -985,10 +985,10 @@
             </objects>
             <point key="canvasLocation" x="1487" y="905"/>
         </scene>
-        <!--AnimatedView-->
+        <!--AnimatedViewController-->
         <scene sceneID="iOx-Lw-axv">
             <objects>
-                <viewController title="AnimatedView" id="Apx-bg-o6q" customClass="AnimatedView" sceneMemberID="viewController">
+                <viewController title="AnimatedViewController" id="Apx-bg-o6q" customClass="AnimatedView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UBH-Fx-qMj"/>
                         <viewControllerLayoutGuide type="bottom" id="Sgf-ra-Aqo"/>
@@ -1065,10 +1065,10 @@
             </objects>
             <point key="canvasLocation" x="2453" y="905"/>
         </scene>
-        <!--Gif Animation View Controller-->
+        <!--GIFAnimationViewController-->
         <scene sceneID="Evb-uv-M5h">
             <objects>
-                <viewController id="GQe-FM-hDK" customClass="GifAnimationViewController" sceneMemberID="viewController">
+                <viewController title="GIFAnimationViewController" id="GQe-FM-hDK" customClass="GifAnimationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qxn-zK-fgu"/>
                         <viewControllerLayoutGuide type="bottom" id="Xck-iD-6wm"/>
@@ -1129,10 +1129,10 @@
             </objects>
             <point key="canvasLocation" x="482" y="-645"/>
         </scene>
-        <!--Collection View Example-->
+        <!--CollectionViewController-->
         <scene sceneID="qtv-Dn-RUm">
             <objects>
-                <viewController id="Tcn-Nu-6bp" customClass="CollectionViewExample" sceneMemberID="viewController">
+                <viewController title="CollectionViewController" id="Tcn-Nu-6bp" customClass="CollectionViewExample" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mvs-1t-1a5"/>
                         <viewControllerLayoutGuide type="bottom" id="u85-cv-qTd"/>
@@ -1221,10 +1221,10 @@
             </objects>
             <point key="canvasLocation" x="-1676" y="-644"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--MainNavigationController-->
         <scene sceneID="EY1-tz-kwO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tyY-BE-R1M" sceneMemberID="viewController">
+                <navigationController title="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tyY-BE-R1M" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Ud-po-tqi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
