@@ -9,6 +9,7 @@
 //Rohit Parihar
 
 #import "SwipeViewController.h"
+#import "TapViewController.h"
 
 @interface SwipeViewController ()
 {
