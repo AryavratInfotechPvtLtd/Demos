@@ -6,8 +6,6 @@
 //  Copyright © 2016 Aryavrat. All rights reserved.
 //
 
-//Rohit Parihar
-
 #import "TapViewController.h"
 #import "MenuViewController.h"
 
@@ -86,6 +84,8 @@
     self.Vw.center = VwCenter;
 }
 
+//Rohit Parihar
+
 /*
 #pragma mark - Navigation
 
@@ -95,5 +95,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//Adding Comment
 
 @end
