@@ -6,6 +6,8 @@
 //  Copyright © 2016 Aryavrat. All rights reserved.
 //
 
+// Rohit Parihar
+
 #import "CollectionViewExample.h"
 
 @interface CollectionViewExample ()
