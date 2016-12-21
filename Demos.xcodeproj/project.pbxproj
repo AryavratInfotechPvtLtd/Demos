@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0B7C751E0AB89000CA08B1 /* Study&Accounts.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CE0B7C741E0AB89000CA08B1 /* Study&Accounts.rtf */; };
 		CE2D10991D94027F0075F26E /* ValidationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2D10981D94027F0075F26E /* ValidationViewController.m */; };
 		CE3C35051D892ECB00C56FD8 /* TextFieldExample.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3C35041D892ECB00C56FD8 /* TextFieldExample.m */; };
 		CE3D76671D5D8EF5007A5AD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3D76661D5D8EF5007A5AD8 /* main.m */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0B7C741E0AB89000CA08B1 /* Study&Accounts.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Study&Accounts.rtf"; sourceTree = "<group>"; };
 		CE2D10971D94027F0075F26E /* ValidationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidationViewController.h; sourceTree = "<group>"; };
 		CE2D10981D94027F0075F26E /* ValidationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidationViewController.m; sourceTree = "<group>"; };
 		CE3C35031D892ECB00C56FD8 /* TextFieldExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldExample.h; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 		CE40DEAC1DBB706300B7D8F3 /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				CE0B7C741E0AB89000CA08B1 /* Study&Accounts.rtf */,
 				CE40DEAD1DBB708A00B7D8F3 /* CoreAnimationViewController.h */,
 				CE40DEAE1DBB708A00B7D8F3 /* CoreAnimationViewController.m */,
 			);
@@ -501,6 +504,7 @@
 				CE4A7CC31DA9019F000A9471 /* Google.png in Resources */,
 				CEC866961D817E4600357062 /* ic_send.png in Resources */,
 				CE3D76751D5D8EF5007A5AD8 /* LaunchScreen.storyboard in Resources */,
+				CE0B7C751E0AB89000CA08B1 /* Study&Accounts.rtf in Resources */,
 				CE4A7CC51DA9019F000A9471 /* Twitter.png in Resources */,
 				CE3D76721D5D8EF5007A5AD8 /* Assets.xcassets in Resources */,
 				CE4A7CC21DA9019F000A9471 /* Facebook.png in Resources */,

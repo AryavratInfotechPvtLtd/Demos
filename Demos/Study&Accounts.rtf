@@ -1,0 +1,580 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 AppleColorEmoji;\f4\fnil\fcharset0 NotoSansRunic;}
+{\colortbl;\red255\green255\blue255;\red27\green29\blue31;\red11\green87\blue42;\red255\green247\blue212;
+\red235\green236\blue237;\red29\green133\blue25;\red19\green20\blue21;\red52\green52\blue52;\red246\green246\blue246;
+\red61\green52\blue46;\red251\green251\blue249;\red117\green117\blue117;\red38\green38\blue38;\red234\green234\blue234;
+\red36\green38\blue41;\red43\green39\blue19;\red245\green245\blue245;\red19\green36\blue126;\red0\green0\blue255;
+\red186\green0\blue17;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh14480\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \expnd0\expndtw0\kerning0
+@Dynamic And Static Library \
+\
+1. Static library - a unit of code linked at compile time, which does not change. However, iOS static libraries are not allowed to contain images/assets (only code). You can get around this challenge by using a media bundle though.\
+\
+2. Dynamic library - a unit of code and/or assets linked at runtime that may change.\
+\
+Static Library :\
+1.  First Create And Build For Both " Simulator and Generic IOS Device"\
+ 	> Result Will be library For "Simulator and  Generic IOS Device"\
+	\
+	//Optional\
+	> Create New File In Static Library :\
+			File > New > File > Cocoa Touch Class - Next & Create\
+\
+				Now Import this New Class in "Build Phase" > "Copy Files " > "Class.h"\
+ \
+\pard\pardeftab720\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 2. Create a "Universal Library"\
+	From Terminal \
+			1. Change Path For Product Folder(Cd <Product Folder>)\
+			2. Now "LIPO Command"\
+				lipo -create <Path For Simulator And iphone  Static Library > -output <Path and Name For Universal Static library>\
+\
+	From Target\
+			1. Add Target "Aggregate"\
+				New > File > OS X> Others > Aggregate - Next & Create\
+	\
+			2. Add Run Script \
+				\
+			3. Build On "IOS \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Generic Device\cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 "\
+ \
+	> Result Will a Static library For both "\cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Simulator and  IOS Device\cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 " \
+\
+\
+3. Now import Static Library in Another Application\
+ 	> Create a New Project And Drag This Library In Any Where in Project\
+		in Any Class for import library \
+			First Set Root Path $SOURCE_ROOT/include then include	\
+		Now Final Step is to add to Other Linker Flag\
+\pard\pardeftab720\parhyphenfactor20\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1  			\cf3 -ObjC\cf0  linker flag. \
+				>  With this flag, all the Objective-C classes and categories in the library are loaded properly.\
+\
+			//Optional \
+				> -all_load : \cf2 You additionally need to add -all_load to the Other Linker Flags of the target which is using your static library. \cb4 -all_load forces the linker to load all object files from every archive it sees, even those without Objective-C code.\cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+				> -force_load :\cf2 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 -\cf0 force_load (path_to_archive) Loads all members of the specified static archive library. \
+Note: -all_load forces all members of all archives to be loaded. This option allows you to target a specific archive.\
+\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 If your Architectures and Valid Architectures are all right, you may check whether you have add \cb5 $(inherited)\cb1  to Other Linker Flags.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 @Create a Universal library Commands
+\f1\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \CocoaLigature0 cd /Users/user/Library/Developer/Xcode/DerivedData/ChatLibrary-eustsvopvrqkthekiwdrfaarvfpq/Build/Products \
+\
+lipo -create Debug-iphonesimulator/libChatLibrary.a Debug-iphoneos/libChatLibrary.a -output CLLibrary.a\
+\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2 \cf6 The quality of service assigned to the message. There are three levels of QoS in MQTT:\
+QoS 0: "Fire and Forget", the message might not be delivered.\
+QoS 1: "At Least Once", the message is delivered at least once,\
+            and may be delivered more than once under some circumstances.\
+QoS 2: "Exactly Once", the message is guaranteed to be delivered\
+         once and only once, under any circumstance.\
+ 
+\f0 \cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+@Links\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.appcoda.com/ios-concurrency/"}}{\fldrslt \cf0 \kerning1\expnd0\expndtw0 http://www.appcoda.com/ios-concurrency/}}\kerning1\expnd0\expndtw0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.idev101.com/code/User_Interface/sizes.html"}}{\fldrslt \cf0 http://www.idev101.com/code/User_Interface/sizes.html}}\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://iosres.com"}}{\fldrslt \cf0 http://iosres.com}}\expnd0\expndtw0\kerning0
+\
+\
+@Reports\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 About Mqtt :\
+a) KeepAliveInterval : The interval is the longest possible period of time, which broker and client can endure without sending a message.\
+\
+About Property\
+\pard\pardeftab720\partightenfactor0
+\cf7 \expnd0\expndtw0\kerning0
+a) We enable \cf8 \cb9 masksToBounds\cf7 \cb1  to \cf8 \cb9 true\cf7 \cb1  so that any sublayers of the layer that extend outside its boundaries will be clipped to those boundaries.
+\f1 \
+\
+@Test Account\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 Email Address : \expnd0\expndtw0\kerning0
+testpariharrohit@gmail.com\cf7 \
+\cf0 \kerning1\expnd0\expndtw0 Password : 2___1__3\
+\pard\pardeftab720\partightenfactor0
+\cf7 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 @Git Commands\
+#First time create git repository and push   \
+ git init \
+ git add .\
+ git commit -m "Comments"\
+ git remote add origin "Git Repository Url"\
+ git remote -v\
+ git push origin master\
+\
+#add and commit in one line\
+ git commit -a -m "Comments"\
+\
+#Get Url\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \CocoaLigature0 git config --get remote.origin.url\CocoaLigature1 \
+ \
+#Add Tag \
+ git tag -a <tag name> -m <Comment> \
+ or \
+ git tag  <tag name>\
+\
+ git tag\
+ \
+ git show <tag name>\
+\
+#For Switch head to Particular Commit \
+ git reset \'97hard <Commit point>\
+ or \
+ git reset \'97soft <Commit point>\
+\
+#Force Push Code \
+ git push -f origin master\
+\
+#Create New branch \
+ git checkout -b <New Branch Name> <Commit Number>\
+ git push origin <Branch Name>\
+q--\
+#Switch between Branch \
+ git checkout <Branch Name>\
+\
+#Check Current Branch :\
+ git branch\
+\
+#Log of all Commit with corresponding to author \
+\CocoaLigature0 git log --author=<author_name>\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \CocoaLigature1  \
+#How to Search Commits : \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \CocoaLigature0  git log --all --grep='<Commit_Name>'\
+\
+#Get author name, email, commit number, name \
+ git log --pretty=format:"%h - %an: %ae, %ar : %s"\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf12 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf12 \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf12 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw20\brdrcf12 \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Option\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Description of Output\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %H\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Commit hash\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %h\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Abbreviated commit hash\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %T\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Tree hash\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %t\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Abbreviated tree hash\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %P\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Parent hashes\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %p\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Abbreviated parent hashes\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %an\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Author name\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %ae\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Author email\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %ad\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Author date (format respects the --date=option)\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %ar\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Author date, relative\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %cn\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Committer name\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %ce\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Committer email\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %cd\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Committer date\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %cr\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Committer date, relative\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamart600 \tamarb600 \trbrdrl\brdrnil \trbrdrb\brdrs\brdrw20\brdrcf12 \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1740\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth5260\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt120 \clpadl120 \clpadb120 \clpadr120 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf13 \cb14 %s\cf10 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf10 \cb11 Subject\cb1 \cell \lastrow\row
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+#How to search string in git repository\
+ git grep [option] "Search_String"\
+ option \
+ 	-n = line_number\
+	-l = Just file name\
+	-c = return count\
+\
+#How to search in two commit \
+ git grep "search_string" master [commit_one] [commit_two] HEAD~2 \
+\
+#How to search string in repository and save output in text file  \
+ git grep Parihar > outfile.txt\
+\
+#Find Difference in two commits \
+git diff <commit_one> <commit_two> > outNew.txt\
+\
+#Find Difference in current and last commits \
+git diff HEAD^ HEAD\
+\
+#how can we find all commits to a particular date by a particular author\
+git log --after="<date> 00:00" --before="<date> 23:59" --author="author name"\
+\
+#List all authors of a particular git project\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1  git log --format='%aN' | sort -u\
+\
+ @List everyone who committed to a particular project, listed alphabetically.\
+  git shortlog -s | cut -c8-\
+\
+#\cf2 show list all users and the number of commits\cf0 \
+ git shortlog -sn\
+\
+#show list all users and the number of commits with commits\
+git shortlog -n\
+\
+#Get the list of all available Branches\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb5 git branch -a\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \cb1 \kerning1\expnd0\expndtw0 @Pod Install\
+\
+0. update system : \cf15 \cb5 \expnd0\expndtw0\kerning0
+sudo gem update --system\cf16 \
+\cf0 \cb1 \kerning1\expnd0\expndtw0 1. Install Cocoa Pods \
+	\expnd0\expndtw0\kerning0
+\CocoaLigature0 sudo gem install cocoapods 		//Online\
+	\kerning1\expnd0\expndtw0 sudo gem install -n /usr/local/bin cocoapods		//Locally\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+2.Change Directory For Project Folder\
+	cd ProjectFolder Path\
+3. initialze Pod\
+	pod init\
+4. Open Pod File And Paste Path Of Pod\
+	open -a Xcode podfile\
+5. Install Pod\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\partightenfactor0
+\cf0 	pod install\
+	pod update  \
+\pard\pardeftab720\sl390\partightenfactor0
+\cf0 \
+//Uninstall cocoapods\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf2 \cb5 \CocoaLigature1 gem uninstall cocoapods\
+\cf0 \cb1 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\partightenfactor0
+\cf0 #For latest release in Cocoa pods \
+		\cf13 \cb17 \CocoaLigature1 pod \cf18 'JSQMessagesViewController'\cf0 \cb1 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0  \
+PodSpec File\
+1. Create PodSpec File\
+	pod spec create CLLibrary\
+\
+2. Test PodSpec File \
+	pod spec lint "<spec location>/SpecName.podspec"\
+\
+if You Are Getting Problem To Intsall "sudo gem install cocoapods" Command then \
+#Check Versions Of Cocoapods\
+\pard\pardeftab720\sl390\partightenfactor0
+\cf2 \CocoaLigature1 which version(s) of Cocoapods you have installed by running this in Terminal\
+\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf2 \cb5 gem list --local | grep cocoapods\
+\pard\pardeftab720\sl390\partightenfactor0
+\cf0 \cb1 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 check Version Of OpenSSl  "\cf13 \cb17 \CocoaLigature1 $ ruby -ropenssl -e 'p OpenSSL::OPENSSL_VERSION"\
+Error regrading to PodsInstall:\
+1. \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0  Error installing cocoapods:\
+	activesupport requires Ruby version >= 2.2.2.\
+Solution :\
+sudo gem install activesupport -v 2.2.2\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \CocoaLigature1 @plist key\
+<!-- 
+\f3 \uc0\u55357 \u56764 
+\f0  Photo Library -->\
+<key>NSPhotoLibraryUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u55357 \u56567 
+\f0  Camera -->\
+<key>NSCameraUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u55356 \u57252 
+\f0  Microphone -->\
+<key>NSMicrophoneUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u55357 \u56525 
+\f0  Location -->\
+<key>NSLocationUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u55357 \u56525 
+\f0  Location When In Use -->\
+<key>NSLocationWhenInUseUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u55357 \u56525 
+\f0  Location Always -->\
+<key>NSLocationAlwaysUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u55357 \u56518 
+\f0  Calendars -->\
+<key>NSCalendarsUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u9200 
+\f0  Reminders -->\
+<key>NSRemindersUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u55356 \u57290 
+\f0  Motion -->\
+<key>NSMotionUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u55357 \u56458 
+\f0  Health Update -->\
+<key>NSHealthUpdateUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u55357 \u56458 
+\f0  Health Share -->\
+<key>NSHealthShareUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f4 \uc0\u5842 
+\f3 \uc0\u55357 \u56629 
+\f0  Bluetooth Peripheral -->\
+<key>NSBluetoothPeripheralUsageDescription</key>\
+<string></string>\
+\
+<!-- 
+\f3 \uc0\u55356 \u57269 
+\f0  Media Library -->\
+<key>NSAppleMusicUsageDescription</key>\
+<string></string>\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \CocoaLigature1 @Library \
+#For TPKeyboardAvoiding \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjJ05by87rNAhVMuI8KHadRB2UQFggdMAA&url=https%3A%2F%2Fgithub.com%2Fmichaeltyson%2FTPKeyboardAvoiding&usg=AFQjCNEmN4UY3fCd2OaWOhfNFeGdnwqr9A"}}{\fldrslt \cf0 GitHub - michaeltyson/TPKeyboardAvoiding: A drop-in universal ...}} \
+#For Dropbox\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/dropbox/dropbox-ios-dropins-sdk"}}{\fldrslt \cf0 https://github.com/dropbox/dropbox-ios-dropins-sdk}} \
+#For MBProgressHUD\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/jdg/MBProgressHUD"}}{\fldrslt \cf0 https://github.com/jdg/MBProgressHUD}}\
+#For Dropbox\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.dropbox.com/developers/chooser"}}{\fldrslt \cf0 https://www.dropbox.com/developers/chooser}}\
+#For Amazon\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/awslabs/aws-sdk-ios-samples"}}{\fldrslt \cf19 \ul \ulc19 https://github.com/awslabs/aws-sdk-ios-samples}}\cf19 \ul \ulc19 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/aws/aws-sdk-ios"}}{\fldrslt \cf0 \ulnone https://github.com/aws/aws-sdk-ios}}\cf0 \ulnone \
+#For Mqtt \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/ibm-messaging/mqtt-ios-sample"}}{\fldrslt \cf0 https://github.com/ibm-messaging/mqtt-ios-sample}}\
+#For TSMessages\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/KrauseFx/TSMessages"}}{\fldrslt \cf0 https://github.com/KrauseFx/TSMessages}}\
+#For Reachability\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/tonymillion/Reachability"}}{\fldrslt \cf0 https://github.com/tonymillion/Reachability}}\
+#JSONModel\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/jsonmodel/jsonmodel"}}{\fldrslt \cf0 https://github.com/jsonmodel/jsonmodel}}\
+#StarRating\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f2 \cf6 \CocoaLigature0 TQStarRatingView\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+\cf20 https://github.com/TinyQ/TQStarRatingView.git
+\f0 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \CocoaLigature1 @Video Links :\
+#For Pods\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=53MRMue3_E0"}}{\fldrslt \cf0 https://www.youtube.com/watch?v=53MRMue3_E0}}\
+#For PCH\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=89e_XS_462o"}}{\fldrslt \cf0 https://www.youtube.com/watch?v=89e_XS_462o}}\
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+\cf0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \CocoaLigature1 @For Check Emoji In String Or/Not\
+- (BOOL)stringContainsEmoji:(NSString *)string \{\
+    __block BOOL returnValue = NO;\
+    [string enumerateSubstringsInRange:NSMakeRange(0, [string length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:\
+     ^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) \{\
+         \
+         const unichar hs = [substring characterAtIndex:0];\
+         // surrogate pair\
+         if (0xd800 <= hs && hs <= 0xdbff) \{\
+             if (substring.length > 1) \{\
+                 const unichar ls = [substring characterAtIndex:1];\
+                 const int uc = ((hs - 0xd800) * 0x400) + (ls - 0xdc00) + 0x10000;\
+                 if (0x1d000 <= uc && uc <= 0x1f77f) \{\
+                     returnValue = YES;\
+                 \}\
+             \}\
+         \} else if (substring.length > 1) \{\
+             const unichar ls = [substring characterAtIndex:1];\
+             if (ls == 0x20e3) \{\
+                 returnValue = YES;\
+             \}\
+             \
+         \} else \{\
+             // non surrogate\
+             if (0x2100 <= hs && hs <= 0x27ff) \{\
+                 returnValue = YES;\
+             \} else if (0x2B05 <= hs && hs <= 0x2b07) \{\
+                 returnValue = YES;\
+             \} else if (0x2934 <= hs && hs <= 0x2935) \{\
+                 returnValue = YES;\
+             \} else if (0x3297 <= hs && hs <= 0x3299) \{\
+                 returnValue = YES;\
+             \} else if (hs == 0xa9 || hs == 0xae || hs == 0x303d || hs == 0x3030 || hs == 0x2b55 || hs == 0x2b1c || hs == 0x2b1b || hs == 0x2b50) \{\
+                 returnValue = YES;\
+             \}\
+         \}\
+     \}];\
+    \
+    return returnValue;\
+\}\CocoaLigature0 \
+}
